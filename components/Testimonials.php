@@ -17,7 +17,7 @@ class Testimonials extends ComponentBase
 
     public function onRun()
     {
-        $this->page['testimonials'] = Testimonial::whereIsPublic(1)->get();
+        $this->page['testimonials'] = Testimonial::whereIsPublic(1) ->orderBy('id', 'desc') ->get();
     }
 
 }

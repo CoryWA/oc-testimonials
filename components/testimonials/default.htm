@@ -1,17 +1,15 @@
 <div class="row">
     {% for testimonial in testimonials %}
         <div class="col-md-4">
-            <blockquote class="adjust2">
-                {{ testimonial.content|raw }}
-
+           <div class="well well-lg">
                 {% if testimonial.author %}
-                    <small>{{ testimonial.author }}</small>
+                <h3>{{ testimonial.author }}</h3>
                 {% endif %}
-
-                {% if testimonial.date %}
-                    <small>{{ testimonial.date }}</small>
-                {% endif %}
-            </blockquote>
+                <blockquote style="font-size:14px">
+                {{ testimonial.content|raw }}
+               </blockquote>
+                </div>
+            
         </div>
     {% endfor %}
 </div>
